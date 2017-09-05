@@ -5,11 +5,13 @@
  */
 package com.zm.pblp.configuration;
 
+import com.zm.rabbitmqservice.RMQConfiguration;
+
 /**
  *
  * @author zmiller
  */
-public enum LogHost {
+public enum LogHost implements RMQConfiguration{
 
     LOCAL("localhost"),
     PROD("localhost");
@@ -20,6 +22,7 @@ public enum LogHost {
         this.value = value;
     }
 
+    @Override
     public String getValue() {
         return value;
     }

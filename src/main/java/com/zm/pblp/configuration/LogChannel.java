@@ -5,11 +5,13 @@
  */
 package com.zm.pblp.configuration;
 
+import com.zm.rabbitmqservice.RMQConfiguration;
+
 /**
  *
  * @author zmiller
  */
-public enum LogChannel {
+public enum LogChannel implements RMQConfiguration {
     
     LOGS("logs");
 
@@ -19,6 +21,7 @@ public enum LogChannel {
         this.value = value;
     }
 
+    @Override
     public String getValue() {
         return value;
     }

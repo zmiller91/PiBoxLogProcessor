@@ -1,0 +1,68 @@
+{
+    "packageName": "com.zm.pblp",
+    "api": {
+        "name": "Api",
+        "methods": [{
+                "name": "log",
+                "result": "GeneralLog",
+                "params": [
+                    {
+                        "name": "message",
+                        "ref": "GeneralLog"
+                    }
+                ]
+            },
+            {
+                "name": "testVoid",
+                "params": [
+                    {
+                        "name": "message",
+                        "ref": "GeneralLog"
+                    }
+                ]
+            },
+            {
+                "name": "testComplexType",
+                "result": "array",
+                "params": [
+                    {
+                        "name": "message",
+                        "ref": "GeneralLog"
+                    }
+                ]
+            }]
+    },
+    "models": [
+        {
+            "name": "GeneralLog",
+            "properties": [
+                {
+                    "name": "time",
+                    "ref": "long"
+                },
+                {
+                    "name": "id",
+                    "ref": "string"
+                },
+                {
+                    "name": "message",
+                    "ref": "string"
+                }
+            ]
+        },
+        {
+            "name": "string",
+            "javaType": "String"
+        },
+        {
+            "name": "long",
+            "javaType": "long"
+        },
+        {
+            "name": "array",
+            "javaType": "List<Map<String, String>>",
+            "javaPackage": "java.util.List",
+            "imports": ["java.util.Map"]
+        }]
+
+}

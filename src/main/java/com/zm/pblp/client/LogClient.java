@@ -11,6 +11,8 @@ import com.zm.pblp.configuration.LogHost;
 import com.zm.pblp.model.GeneralLog;
 import com.zm.rabbitmqservice.RMQClient;
 import java.io.IOException;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeoutException;
 
 /**
@@ -24,8 +26,22 @@ public class LogClient extends RMQClient implements Api{
         super(host.getValue(), channel.getValue(), executorPoolSize);
     }
 
+//    public void log(GeneralLog message) {
+//        this.makeRequest("log", message);
+//    }
+
     @Override
-    public void log(GeneralLog message) {
-        this.makeRequest("log", message);
+    public GeneralLog log(GeneralLog message) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void testVoid(GeneralLog message) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Map<String, String>> testComplexType(GeneralLog message) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
