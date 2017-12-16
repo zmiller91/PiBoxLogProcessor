@@ -1,5 +1,18 @@
 {
-    "packageName": "com.zm.pblp",
+    "name": "PBMessenger",
+    "packageName": "com.zm.pbmessenger",
+
+    "configuration": {
+        "channels": {
+            "test": "pblp_test",
+            "prod": "pblp_prod"
+        },
+        "hosts": {
+            "test": "localhost",
+            "prod": "localhost"
+        }
+    },
+
     "api": {
         "name": "Api",
         "methods": [{
@@ -11,27 +24,9 @@
                         "ref": "GeneralLog"
                     }
                 ]
-            },
-            {
-                "name": "testVoid",
-                "params": [
-                    {
-                        "name": "message",
-                        "ref": "GeneralLog"
-                    }
-                ]
-            },
-            {
-                "name": "testComplexType",
-                "result": "array",
-                "params": [
-                    {
-                        "name": "message",
-                        "ref": "GeneralLog"
-                    }
-                ]
             }]
     },
+
     "models": [
         {
             "name": "GeneralLog",
@@ -57,12 +52,8 @@
         {
             "name": "long",
             "javaType": "long"
-        },
-        {
-            "name": "array",
-            "javaType": "List<Map<String, String>>",
-            "javaPackage": "java.util.List",
-            "imports": ["java.util.Map"]
-        }]
+        }],
+
+    "exceptions": []
 
 }
