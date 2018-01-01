@@ -17,7 +17,6 @@
         "name": "Api",
         "methods": [{
                 "name": "log",
-                "result": "GeneralLog",
                 "params": [
                     {
                         "name": "message",

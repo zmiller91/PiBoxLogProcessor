@@ -1,2 +1,5 @@
+
+*.iml
+.idea/*
 nb-configuration.xml
 target/
